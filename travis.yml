@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - openjdk11
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+
+script:
+  - ./mvnw clean package -Dmaven.test.skip=true
